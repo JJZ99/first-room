@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.Flow
 
 class WordRepository(private val wordDao: WordDao) {
 
+    //当数据库更新的时候会调用getAlphabetizedWords，数据
     val allWords : Flow<List<Word>> = wordDao.getAlphabetizedWords()
 
     @Suppress("RedundantSuspendModifier")
